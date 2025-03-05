@@ -21,8 +21,8 @@ from urx import Robot
 import time
 
 if __name__ == '__main__':
-    robot_ip = "192.10.0.11" # left arm
-    # robot_ip = "192.10.0.12" # right arm
+    robot_ip = "192.10.0.12" # left arm
+    # robot_ip = "192.10.0.11" # right arm
     robot = Robot(robot_ip)
     print('Robot pose: ', robot.get_pose())
     print('Sending activation sequence...')
