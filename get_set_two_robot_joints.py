@@ -7,7 +7,7 @@ def slow_servoj_move(robot, q_target, steps=300):
     for i in range(steps):
         q_interp = [(1 - i/steps) * q_current[j] + (i/steps) * q_target[j] for j in range(6)]
         try:
-            robot.servoj(q_interp, vel=0.001, acc=0.003, t=0.1, lookahead_time=0.2, gain=10, wait=False)
+            robot.servoj(q_interp, vel=0.001, acc=0.003, t=0.3, lookahead_time=0.2, gain=300, wait=False)
         except:
             pass
 
