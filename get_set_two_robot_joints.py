@@ -1,7 +1,7 @@
 import urx
 import time
 
-def slow_servoj_move(robot, q_target, steps=100):
+def slow_servoj_move(robot, q_target, steps=300):
     q_current = robot.getj()
     
     for i in range(steps):
