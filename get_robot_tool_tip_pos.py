@@ -55,8 +55,8 @@ def print_tool_tip_pos_orientation(robot):
     print('Getl: ', robot.getl())
 
 if __name__ == '__main__':
-    # robot = urx_local.Robot("192.10.0.11") # left arm
-    robot = urx_local.Robot("192.10.0.12") # right arm
+    # robot = urx_local.Robot("192.10.0.12") # left arm
+    robot = urx_local.Robot("192.10.0.11") # right arm
     print_tool_tip_pos_orientation(robot)
     time.sleep(1)
     print('Done')
