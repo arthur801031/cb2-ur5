@@ -25,22 +25,45 @@ if __name__ == '__main__':
     # robot_ip = "192.10.0.11" # right arm
     robot = Robot(robot_ip)
     print('Robot pose: ', robot.get_pose())
+
+    left_robot_ip = "192.10.0.12"
+    right_robot_ip = "192.10.0.11"
+    left_robot = Robot(left_robot_ip)
     print('Sending activation sequence...')
-    robot.set_tool_voltage(24)
-    robot.set_digital_out(8, False)
-    robot.set_digital_out(9, False)
+    left_robot.set_tool_voltage(24)
+    left_robot.set_digital_out(8, False)
+    left_robot.set_digital_out(9, False)
     time.sleep(0.05)
 
-    robot.set_digital_out(8, True)
+    left_robot.set_digital_out(8, True)
     time.sleep(0.05)
 
-    robot.set_digital_out(8, False)
+    left_robot.set_digital_out(8, False)
     time.sleep(0.05)
 
-    robot.set_digital_out(9, True)
+    left_robot.set_digital_out(9, True)
     time.sleep(0.05)
 
-    robot.set_digital_out(9, False)
+    left_robot.set_digital_out(9, False)
+    time.sleep(0.05)
+
+    right_robot = Robot(right_robot_ip)
+    print('Sending activation sequence...')
+    right_robot.set_tool_voltage(24)
+    right_robot.set_digital_out(8, False)
+    right_robot.set_digital_out(9, False)
+    time.sleep(0.05)
+
+    right_robot.set_digital_out(8, True)
+    time.sleep(0.05)
+
+    right_robot.set_digital_out(8, False)
+    time.sleep(0.05)
+
+    right_robot.set_digital_out(9, True)
+    time.sleep(0.05)
+
+    right_robot.set_digital_out(9, False)
     time.sleep(0.05)
     print('Finish sending the activation sequence.')
 
